@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://it-bada.github.io/sitemap.xml
