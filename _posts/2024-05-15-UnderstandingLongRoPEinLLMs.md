@@ -3,13 +3,12 @@ title: "LLM에서 Long RoPE 이해하기"
 description: ""
 coverImage: "/assets/img/2024-05-15-UnderstandingLongRoPEinLLMs_0.png"
 date: 2024-05-15 23:39
-ogImage: 
+ogImage:
   url: /assets/img/2024-05-15-UnderstandingLongRoPEinLLMs_0.png
 tag: Tech
 originalTitle: "Understanding Long RoPE in LLMs"
 link: "https://medium.com/towards-data-science/understanding-long-rope-in-llms-29337dc7e4a9"
 ---
-
 
 ## 오늘 이 블로그 포스트에서는 성능 하락이 없는 상태에서 LLMs의 맥락 길이를 확장하기 위해 사용되는 Long RoPE 방법론에 대해 자세히 살펴볼 것입니다.
 
@@ -19,8 +18,6 @@ link: "https://medium.com/towards-data-science/understanding-long-rope-in-llms-2
 
 이것은 고객 경험이 좋지 않을 뿐만 아니라, LLM이 합리적으로 처리할 수 있는 정보량을 제한합니다. 그 결과, LLM의 맥락을 점점 더 크게 확장하기 위한 작업이 계속되어왔습니다.
 
-
-
 오늘의 글인 "LongRoPE: 2백만 토큰 이상의 LLM 컨텍스트 창 확장"은 바로 그것을 이루어 냈습니다.
 
 ![이미지](/assets/img/2024-05-15-UnderstandingLongRoPEinLLMs_1.png)
@@ -28,8 +25,6 @@ link: "https://medium.com/towards-data-science/understanding-long-rope-in-llms-2
 위 그래프를 보면, 다음 토큰을 얼마나 잘 예측하는지에 관련된 손실을 측정하는 난해도가 LongRoPE에 대해 낮게 유지되지만 다른 방법론에서 급증하는 것을 볼 수 있습니다.
 
 이 화려한 결과가 어떻게 발견되었는지 자세히 알아보겠습니다.
-
-
 
 # 문맥 길이와 위치 인코딩
 
@@ -39,8 +34,6 @@ link: "https://medium.com/towards-data-science/understanding-long-rope-in-llms-2
 
 ![UnderstandingLongRoPEinLLMs_3.png](/assets/img/2024-05-15-UnderstandingLongRoPEinLLMs_3.png)
 
-
-
 에 위치 지정 정보가 더 필요합니다. 문장에서 토큰의 위치를 나타내기 위해서요. 위의 방정식은 위치 정보를 전달하는 가장 추상화된 관점을 보여줍니다. 우리는 토큰의 각 요소마다 1개의 함수와 2개의 단어 임베딩 벡터(Xm과 Xn)가 있습니다. 여기서 m과 n은 각 벡터가 가지는 차이 있는 차원을 나타냅니다.
 
 한 가지 방법은 보통 각 토큰을 보고 새로운 벡터를 만들어서 위치가 완벽하게 고유하도록 하는 것입니다. 당연히 여기서의 트레이드오프는 모델이 훈련 데이터에서 유사성을 보기 어렵게 하여 성능을 저하시킨다는 것입니다.
@@ -48,8 +41,6 @@ link: "https://medium.com/towards-data-science/understanding-long-rope-in-llms-2
 두 번째 방법은 각 토큰당 다른 벡터와 유사성 요소를 가진 벡터를 만드는 것입니다. 이렇게하면 여전히 다른 상황과의 유사성에 대한 정보를 캡쳐할 수 있습니다. 그러나 이러한 벡터들간의 충돌을 발생시킬 수 있으므로 이 방법론에서 생기는 혼란이 있을 수 있습니다.
 
 이러한 방법들의 최적의 조합을 어떻게 찾을 수 있을까요?
-
-
 
 ## 회전 위치 인코딩 (RoPE)
 
@@ -59,8 +50,6 @@ link: "https://medium.com/towards-data-science/understanding-long-rope-in-llms-2
 
 위의 방정식에서 보듯이, θ 값 주변을 도는 다양한 함수로 채워진 희소 행렬을 가지고 있습니다. 이는 모든 위치 인코딩이 관련되도록 유지하는 방법으로 값을 전달합니다.
 
-
-
 The connection between these θ symbols is illustrated below:
 
 ![UnderstandingLongRoPEinLLMs_5](/assets/img/2024-05-15-UnderstandingLongRoPEinLLMs_5.png)
@@ -68,8 +57,6 @@ The connection between these θ symbols is illustrated below:
 When it comes to context size, the key element in this equation is the number 10,000. In our efforts to construct larger contexts within finite number ranges, the value of 10,000 has proven to be a constraining factor - as there is a limit to the number of vectors that can be generated using this number as a base.
 
 ![UnderstandingLongRoPEinLLMs_6](/assets/img/2024-05-15-UnderstandingLongRoPEinLLMs_6.png)
-
-
 
 ## 롱 평면 이후 로프 확장하기
 
@@ -79,9 +66,6 @@ When it comes to context size, the key element in this equation is the number 10
 
 첫 번째 방법은 선형 위치 보간(PI)입니다. 여기서, 가능한 위치의 수를 θ를 어떤 값 λ로 줄여 선형적으로 보간합니다. 아래의 식은 이전의 모든 세타를 연결하는 데 사용한 θ^(2/d) 식을 Beta로 나타낸 것입니다.
 
-
-
-```markdown
 ![UnderstandingLongRoPEinLLMs_7](/assets/img/2024-05-15-UnderstandingLongRoPEinLLMs_7.png)
 
 While this works, the authors of the paper note that there is a crowding effect where some of the information ends up getting lost after the reduction.
@@ -89,9 +73,6 @@ While this works, the authors of the paper note that there is a crowding effect 
 The second method is YaRN (Yet another RoPE extensioN method) where we divide the RoPE Dimensions into 3 groups and assign a different linear factor to each of them. The basic idea is that tokens that appear frequently should not be altered (their λ := 1) and the ones that are less so are altered. From the graph below, we can see that this works well at expanding up to 128k context length. The issue at play here is determining the groupings. The groups are determined by people and thus there can be sub-optimal decisions made that reduce performance.
 
 ![UnderstandingLongRoPEinLLMs_8](/assets/img/2024-05-15-UnderstandingLongRoPEinLLMs_8.png)
-```
-
-
 
 따라서, YaRN과 Linear Projection(PI)은 모두 작동하지만 한계가 있어 발전이 제한된다. Long RoPE는 각 아이디어의 장점을 살려 그들을 잘 결합하는 방법을 찾아냈다.
 
@@ -101,8 +82,6 @@ Long RoPE 연구자들은 이전 방법을 개선하기 위해 두 가지 핵심
 
 이러한 결과는 아래의 공식에서 찾을 수 있다. 최적의 λ를 찾기 위해, 손실 함수를 만들어 최소화할 수 있었다. 아래의 공식은 우리의 위치 벡터에 대한 스케일링을 나타내는 𝕀와 (n/βi)의 결과를 갖고 있다. 가장 작은 손실을 찾으면 해당하는 λ를 선택한다.
 
-
-
 ![Expansion Results](/assets/img/2024-05-15-UnderstandingLongRoPEinLLMs_9.png)
 
 이 함수는 우리가 변경해서는 안 되는 토큰의 서브셋을 실현하는 방법입니다. 값 1을 선택함으로써, 거기에 위치 부호화를 그대로 유지해야 한다는 신호를 보내게 됩니다. 검색 범위를 제한하기 위해 '0, 1, 2, 4, 8, 12, 16, 20, 24, 28, 32, 64, 128, 256'의 n-hat 값을 고려했습니다. n-hat의 값이 더 높을수록, 원래의 위치 부호화를 유지하는 토큰이 늘어납니다.
@@ -110,8 +89,6 @@ Long RoPE 연구자들은 이전 방법을 개선하기 위해 두 가지 핵심
 # 확장 결과
 
 이론적 부분을 다루었으니 이제 결과를 살펴봅시다!
-
-
 
 ![image](/assets/img/2024-05-15-UnderstandingLongRoPEinLLMs_10.png)
 
@@ -121,8 +98,6 @@ Long RoPE는 세부 조정 유무와 관계없이 작동합니다. 위의 그래
 
 # 확장 이후 작은 컨텍스트 길이 처리하기
 
-
-
 큰 맥락의 어려움 중 하나는 작은 맥락의 작업에 대한 성능 손실입니다. 이 동작은 이전에 관찰된 적이 있으며, 초기 데이터가 작은 범위로 압축되어 일부 주의력이 손실된다는 이론이 있습니다.
 
 2048k 컨텍스트 창 모델에서는 더 짧은 길이에 대해 이상적인 λ를 찾아 문제를 해결했습니다 (논문에서는 4k 및 8k). 추론 중에, 만약 컨텍스트가 작다고 판단된다면, LLM은 위치 부호화 데이터에 작은 λ를 동적으로 사용하도록 전환합니다.
@@ -131,8 +106,6 @@ Long RoPE는 세부 조정 유무와 관계없이 작동합니다. 위의 그래
 
 LLM은 추론력에 뛰어나며, 현실 세계에서의 응용 프로그램으로 우리를 놀라게 합니다. 특히 제한된 비용으로 여전히 높은 성능을 유지할 수 있는 큰 컨텍스트 창이 있다면, 우리는 그 응용 분야가 계속 확장되는 것만 볼 것입니다.
 
-
-
 한 가지 흥미로운 질문은 동적 위치 인코딩 계산이 미래의 방향이 될 수 있는가 하는 것입니다. 여러 위치 인코딩에서 세밀하게 조정하고 2λ의 품질 성능을 얻을 수 있다면, 추론 시간에 여러 λ 간을 매끄럽게 전환할 수 있는 1개의 모델이 있다는 것일지도 모릅니다.
 
 LLM 공간에서 가장 흥미로운 점 중 하나는 데이터를 걸러내는 잠재력입니다. 인터넷은 정보에 대한 접근을 대중화하는 데 놀랄만한 일을 해왔지만, 우리의 삶을 불필요한 소음으로 넘쳐나게도 만들었습니다. 온라인에서 우리에게 거의 관련이 없는 것들이 많이 보여지고 있습니다. 평범하고 해로운 정보에서 중요한 정보를 추출해주는 도구가 있다면, 우리는 인터넷을 최대한 활용할 수 있을 것입니다.
@@ -140,8 +113,6 @@ LLM 공간에서 가장 흥미로운 점 중 하나는 데이터를 걸러내는
 더 넓은 맥락 창을 가지는 경우, LLM의 요약 및 정보 압축 능력은 더 큰 효과로 사용될 수 있습니다. 어쩌면 LLMs에게 두 가지 서로 다른 집합의 정보를 제공하고 그것을 각 집합의 전제에서 이성적으로 추론할 수 있는 새로운 것을 찾아내도록 하는 것에서 큰 발전이 올 수도 있습니다.
 
 건설하는 것에 있어 흥미로운 시기입니다.
-
-
 
 **자료 참고:**
 
