@@ -20,7 +20,7 @@ cd out
 git clone -b gh-pages https://github.com/it-bada/it-bada.github.io/
 cp -rf it-bada.github.io/.git ./.git
 git config user.name "it-bada"
-git config user.email "13akstjq.blog24@gmail.com"
+git config user.email "13akstjq.blog26@gmail.com"
 rm -rf it-bada.github.io
 
 touch .nojekyll
