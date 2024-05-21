@@ -3,13 +3,12 @@ title: "옛날 헤드폰 시대가 그립습니다"
 description: ""
 coverImage: "/assets/img/2024-05-20-IMissTheOldHeadphoneEra_0.png"
 date: 2024-05-20 23:57
-ogImage: 
+ogImage:
   url: /assets/img/2024-05-20-IMissTheOldHeadphoneEra_0.png
 tag: Tech
 originalTitle: "I Miss The Old Headphone Era"
 link: "https://medium.com/@xander51/i-miss-the-old-headphone-era-effe64b78722"
 ---
-
 
 십 년 전, 헤드폰 시장은 번창했습니다. Beats가 대형 헤드폰을 공공 장소나 커피숍에서 입는 것을 "섹시하다"로 만들어 주었고, 음향 시장은 대중적인 대량 폭파를 경험했습니다.
 
@@ -37,11 +36,7 @@ link: "https://medium.com/@xander51/i-miss-the-old-headphone-era-effe64b78722"
 
 애플의 하드웨어 에코 시스템은 디자인상 외부 지원이 거의 없죠. 모양과 크기가 다양한 AirPods는 종종 500달러 이상에 이르는 큰 일회용 장난감이에요. 추가 요금을 내고 Apple Care를 구입할 수 있지만, 특정 수리에 대해 주머니에서 지불해야 할 수도 있어요. 헤드폰 하드웨어는 분해하기 어려워서 새 제품을 주는 것보다 고쳐줄 가능성도 있어요. 이건 전자 폐기물의 도시, 좋은 상황은 아니에요.
 
-(```markdown
 ![이미지](/assets/img/2024-05-20-IMissTheOldHeadphoneEra_0.png)
-```)
-
-
 
 <div class="content-ad"></div>
 

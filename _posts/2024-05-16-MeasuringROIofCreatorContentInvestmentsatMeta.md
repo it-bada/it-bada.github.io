@@ -13,9 +13,9 @@ link: "https://medium.com/@AnalyticsAtMeta/measuring-roi-of-creator-content-inve
 
 이미지 링크를 다음과 같이 변경해주세요.
 
-```
+
 ![Image](/assets/img/2024-05-16-MeasuringROIofCreatorContentInvestmentsatMeta_0.png)
-```
+
 
 다녀오신 지난 수년 간 Meta는 페이스북과 인스타그램에서 창작자들이 수익을 창출할 수 있게 해주는 다채로운 프로그램과 제품들을 구축해왔습니다. Meta의 창작자 수익화 제품의 목표는 두 가지로 나눌 수 있습니다: 창작자들에게 경제적 기회를 제공하고 활기찬 콘텐츠 생태계를 통해 사용자들에게 가치를 전달하는 것입니다.
 

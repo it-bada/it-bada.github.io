@@ -3,13 +3,12 @@ title: "아마존 면접에는 SQL 코딩 질문이 10개 있어요"
 description: ""
 coverImage: "/assets/img/2024-05-18-10SQLCodingQuestionsinAmazonInterviews_0.png"
 date: 2024-05-18 22:59
-ogImage: 
+ogImage:
   url: /assets/img/2024-05-18-10SQLCodingQuestionsinAmazonInterviews_0.png
 tag: Tech
 originalTitle: "10 SQL Coding Questions in Amazon Interviews"
 link: "https://medium.com/@sqlfundamentals/10-sql-coding-questions-in-amazon-interviews-dcaff9277cd2"
 ---
-
 
 Data Analyst나 Data Scientist로 취직하고 싶다면 SQL에서의 강력한 기술력이 필요합니다. 인터뷰에서는 후보자들의 문제 해결 능력과 SQL 능력을 시험하는 복잡한 SQL 코딩 문제가 종종 제시됩니다. 이 글에서는 MySQL을 사용하여 아마존의 인터뷰에서 자주 나오는 일반적인 SQL 질문들을 코드 예제와 결과와 함께 살펴보겠습니다.
 
@@ -65,7 +64,7 @@ WHERE salary > (SELECT AVG(salary) FROM employees);
 
 <div class="content-ad"></div>
 
-```markdown
+
 원들의EmployeeHierarchy
 
 아래 결과와 같이 전체 직원 계층을 가져오는 재귀 CTE입니다.
@@ -77,7 +76,7 @@ WHERE salary > (SELECT AVG(salary) FROM employees);
 | 3  | Bob     | 1          |
 | 4  | Carol   | 2          |
 | 5  | Dave    | 2          |
-```
+
 
 <div class="content-ad"></div>
 
@@ -96,28 +95,31 @@ GROUP BY department;
 <div class="content-ad"></div>
 
 ```plaintext
-```markdown
-+-------------+---------------+
-| department  | HighestSalary |
-+-------------+---------------+
-| Engineering | 90000         |
-| HR          | 80000         |
-| Sales       | 75000         |
-+-------------+---------------+
+
 ```
+
++-------------+---------------+
+| department | HighestSalary |
++-------------+---------------+
+| Engineering | 90000 |
+| HR | 80000 |
+| Sales | 75000 |
++-------------+---------------+
+
+
 
 이 쿼리는 부서별로 직원을 그룹화하고 각 부서의 최고 급여를 찾습니다.
 
 ## 5. 연속 결근자 식별
 
 출석 기록에 대해 연이어 결근한 직원을 식별해야 할 수 있습니다.
-```
+
 
 <div class="content-ad"></div>
 
-```markdown
+
 WITH ConsecutiveAbsences AS (
-    SELECT id, 
+    SELECT id,
            date,
            LAG(date, 1) OVER (PARTITION BY id ORDER BY date) AS previous_date
     FROM attendance
@@ -126,16 +128,16 @@ WITH ConsecutiveAbsences AS (
 SELECT id, date
 FROM ConsecutiveAbsences
 WHERE DATEDIFF(date, previous_date) = 1;
-```
+
 
 Result:
 
-```markdown
+
 | id | date       |
 |----|------------|
 | 3  | 2024-05-10 |
 | 3  | 2024-05-11 |
-```
+
 
 This query finds employees who were absent on consecutive days by comparing each absence date with the previous one.
 
@@ -146,7 +148,7 @@ This query finds employees who were absent on consecutive days by comparing each
 아마존 면접에는 러닝 토탈을 계산하는 질문이 포함될 수 있어요:
 
 ```sql
-SELECT date, sales, 
+SELECT date, sales,
        SUM(sales) OVER (ORDER BY date) AS running_total
 FROM sales;
 ```
@@ -155,7 +157,6 @@ FROM sales;
 
 <div class="content-ad"></div>
 
-```markdown
 ```sql
 +------------+-------+--------------+
 | 날짜       | 매출  | 누적합계      |
@@ -171,7 +172,7 @@ FROM sales;
 ## 7. 구매를 한 번도 하지 않은 고객
 
 구매를 한 번도 하지 않은 고객을 찾기 위해 LEFT JOIN을 사용할 수 있습니다:
-```
+
 
 <div class="content-ad"></div>
 
@@ -263,22 +264,19 @@ FROM monthly_sales;
 
 <div class="content-ad"></div>
 
-```markdown
 +-------+-------+--------+
-|  월   |  매출 |  성장률 |
+| 월 | 매출 | 성장률 |
 +-------+-------+--------+
-|  1월  | 1000  |   NULL  |
-|  2월  | 1100  |  100    |
-|  3월  | 1200  |  100    |
+| 1월 | 1000 | NULL |
+| 2월 | 1100 | 100 |
+| 3월 | 1200 | 100 |
 +-------+-------+--------+
-```
 
 이 쿼리는 매출의 월간 성장률을 계산합니다.
 
 ## 결론
 
 아마존 면접 준비에는 고급 SQL 개념을 이해하고 복잡한 비즈니스 문제를 해결할 수 있는 능력이 필요합니다. 이러한 SQL 코딩 문제를 숙달하고 실제 데이터로 연습함으로써, 면접관들을 감명시키고 아마존에서 꿈에 그리던 직장을 확보할 수 있을 것입니다.
-```
 
 <div class="content-ad"></div>
 
@@ -286,3 +284,7 @@ FROM monthly_sales;
 
 당신의 시간과 관심에 감사드립니다! 🚀
 더 많은 콘텐츠는 SQL 기초에서 찾아볼 수 있어요! 💫
+
+
+
+

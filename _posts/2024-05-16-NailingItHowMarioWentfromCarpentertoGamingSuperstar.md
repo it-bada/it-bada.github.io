@@ -3,7 +3,7 @@ title: "모두의 고양이 친구, 추리퍼즐 게임 스낵월드에 새로�
 description: ""
 coverImage: "/assets/img/2024-05-16-NailingItHowMarioWentfromCarpentertoGamingSuperstar_0.png"
 date: 2024-05-16 13:40
-ogImage: 
+ogImage:
   url: /assets/img/2024-05-16-NailingItHowMarioWentfromCarpentertoGamingSuperstar_0.png
 tag: Tech
 originalTitle: "Nailing It: How Mario Went from Carpenter to Gaming Superstar!"
@@ -11,14 +11,13 @@ link: "https://medium.com/@tantrum.media.store/nailing-it-how-mario-went-from-ca
 ---
 
 
-```markdown
 ![Mario](/assets/img/2024-05-16-NailingItHowMarioWentfromCarpentertoGamingSuperstar_0.png)
 
 비디오 게임의 광활한 영역 속에서, 마리오만큼 추억, 기쁨, 그리고 보편적으로 인식되는 캐릭터는 거의 없습니다. 닌텐도의 전설적인 게임 디자이너 시게루 미야모토가 만들어낸 마리오는 세대와 문화적 경계를 초월하여 게임 산업의 상징적인 상징으로 거듭났습니다. 화려하지 않은 배관공에서 시작해 세계적인 현상으로 성장한 마리오의 여정은 상상력 넘치는 이야기와 중독적인 게임 플레이의 영구적인 힘을 입증하는 것입니다.
 
 문화적 현상:
 1980년대 아케이드 클래식 '돈키콩'에서 데뷔한 이후 마리오는 닌텐도와 동의어로 지어져 있으며 회사 내 가장 인식도 높은 마스코트로 꼽히기도 합니다. 상징적인 빨간 모자, 굵은 수염, 파란색 작업복을 가진 마리오는 대중 문화에 자리잡으며 만화, 만화, 영화에 나타나며 상품 라인까지 영감을 주었습니다.
-```
+
 
 <div class="content-ad"></div>
 

@@ -3,7 +3,7 @@ title: "나는 매번 곰을 선택할 거야"
 description: ""
 coverImage: "/assets/img/2024-05-17-IllTakeTheBearEverySingleTime_0.png"
 date: 2024-05-17 22:29
-ogImage: 
+ogImage:
   url: /assets/img/2024-05-17-IllTakeTheBearEverySingleTime_0.png
 tag: Tech
 originalTitle: "I’ll Take The Bear Every Single Time"
@@ -11,7 +11,6 @@ link: "https://medium.com/heart-affairs/ill-take-the-bear-every-single-time-6be2
 ---
 
 
-```markdown
 ![Image](/assets/img/2024-05-17-IllTakeTheBearEverySingleTime_0.png)
 
 So many of my friends doubted my claim of not being jaded. After mulling over the whole "bear vs man" debate that's currently trending on TikTok, I'm starting to wonder if maybe I am indeed more jaded than I'd like to admit.
@@ -19,7 +18,7 @@ So many of my friends doubted my claim of not being jaded. After mulling over th
 It's a tough realization to come to.
 
 But as I reflect on the inner work I need to focus on, I can't help but notice how some men are quick to minimize and mansplain why "bear" is the incorrect choice in this scenario. It's important for them to understand why so many women resonate with this perspective.
-```
+
 
 <div class="content-ad"></div>
 

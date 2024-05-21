@@ -83,13 +83,13 @@ link: "https://medium.com/@cengiztoru/google-i-o-2024-what-is-coming-for-develop
 안녕하세요!
 이미지 태그를 마크다운 형식으로 변경해 드렸어요.
 
-```
-![이미지](/assets/img/2024-05-17-WhatiscomingfordevelopersatGoogleIO2024GeminiinIDEsandChromeFirebaseSQLDatabaseGenkitProjectIDXKotlinMultiplatformChecksAgents_7.png)
-```
 
-```
+![이미지](/assets/img/2024-05-17-WhatiscomingfordevelopersatGoogleIO2024GeminiinIDEsandChromeFirebaseSQLDatabaseGenkitProjectIDXKotlinMultiplatformChecksAgents_7.png)
+
+
+
 ![이미지](/assets/img/2024-05-17-WhatiscomingfordevelopersatGoogleIO2024GeminiinIDEsandChromeFirebaseSQLDatabaseGenkitProjectIDXKotlinMultiplatformChecksAgents_8.png)
-```
+
 
 올해 말에는 멀티 모달 기능이 제공되고, 변환과 정제 기능은 안드로이드 스튜디오의 코알라 버전에서 사용할 수 있어요.
 

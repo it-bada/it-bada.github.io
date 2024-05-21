@@ -3,7 +3,7 @@ title: "사람들이 10,000개 이상의 트윗을 작성하는 방법에 대해
 description: ""
 coverImage: "/assets/img/2024-05-16-Howdopeoplehavemorethan10000tweets_0.png"
 date: 2024-05-16 13:35
-ogImage: 
+ogImage:
   url: /assets/img/2024-05-16-Howdopeoplehavemorethan10000tweets_0.png
 tag: Tech
 originalTitle: "How do people have more than 10,000 tweets?"
@@ -11,7 +11,6 @@ link: "https://medium.com/@zee-dianne/how-do-people-have-more-than-10-000-tweets
 ---
 
 
-```markdown
 ![Image](/assets/img/2024-05-16-Howdopeoplehavemorethan10000tweets_0.png)
 
 There are many people on X (formally Twitter) that have more than 10,000 tweets.
@@ -19,7 +18,7 @@ There are many people on X (formally Twitter) that have more than 10,000 tweets.
 How can you tell?
 
 Let me show you:
-```
+
 
 <div class="content-ad"></div>
 
@@ -64,7 +63,7 @@ Circleboom을 사용하여 RSS 피드를 트위터에 게시하는 방법을 알
 Step#1: 우선 Twitter 프로필을 사용하여 Circleboom Publish 계정에 로그인해야 해요.
 
 Circleboom에 로그인하는 데 몇 초만 소요돼요.
-   
+
 ![Circleboom](/assets/img/2024-05-16-Howdopeoplehavemorethan10000tweets_3.png)
 
 <div class="content-ad"></div>
