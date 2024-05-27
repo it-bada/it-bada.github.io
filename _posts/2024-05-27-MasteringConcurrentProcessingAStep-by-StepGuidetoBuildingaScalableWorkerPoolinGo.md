@@ -3,13 +3,12 @@ title: "Go언어에서 확장 가능한 워커 풀을 구축하는 방법을 단
 description: ""
 coverImage: "/assets/img/2024-05-27-MasteringConcurrentProcessingAStep-by-StepGuidetoBuildingaScalableWorkerPoolinGo_0.png"
 date: 2024-05-27 19:52
-ogImage: 
+ogImage:
   url: /assets/img/2024-05-27-MasteringConcurrentProcessingAStep-by-StepGuidetoBuildingaScalableWorkerPoolinGo_0.png
 tag: Tech
 originalTitle: "Mastering Concurrent Processing: A Step-by-Step Guide to Building a Scalable Worker Pool in Go"
 link: "https://medium.com/@souravchoudhary0306/mastering-concurrent-processing-a-step-by-step-guide-to-building-a-scalable-worker-pool-in-go-54093074c612"
 ---
-
 
 **10,000개의 요청을 초당 처리해요!**
 
@@ -78,7 +77,7 @@ type RequestHandler func(interface{}) error
 
 <div class="content-ad"></div>
 
-```markdown
+````
 ### interface.go
 
 ```go
@@ -100,7 +99,7 @@ type Dispatcher interface {
  MakeRequest(Request)
  Stop(ctx context.Context)
 }
-```
+````
 
 ### worker.go
 
@@ -348,3 +347,4 @@ Thank you for your time.
 <div class="content-ad"></div>
 
 마음에 드시는 사람들과 언제든 연락하세요! LinkedIn에 연결해보는 건 어떠세요? 🤝
+```

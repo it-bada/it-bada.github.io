@@ -3,15 +3,13 @@ title: "윌 레비스의 유출된 트위터 인기 동영상"
 description: ""
 coverImage: "/assets/img/2024-05-27-WillLevisLeakedTrendingVideoonTwitter_0.png"
 date: 2024-05-27 19:57
-ogImage: 
+ogImage:
   url: /assets/img/2024-05-27-WillLevisLeakedTrendingVideoonTwitter_0.png
 tag: Tech
 originalTitle: "Will Levis Leaked Trending Video on Twitter"
 link: "https://medium.com/@Willlevistrending/will-levis-leaked-trending-video-on-twitter-85f3fd84871c"
 ---
 
-
-```markdown
 ![Will Levis trending video](/assets/img/2024-05-27-WillLevisLeakedTrendingVideoonTwitter_0.png)
 
 소셜 미디어의 끊임없는 변화 속에서 화제를 빠르고 넓게 사로잡는 것은 바이럴 동영상뿐입니다. 최근 이 현상의 중심에 서 있는 인물은 미식 축구 세계의 떠오르는 스타인 윌 레비스입니다.
@@ -19,7 +17,6 @@ link: "https://medium.com/@Willlevistrending/will-levis-leaked-trending-video-on
 ## `` 전체 동영상 보러가기 👈👈
 
 최근 레비스를 주인공으로 한 동영상이 트위터를 뜨겁게 달궜으며, 널리 논의되고, 미디어의 주목을 받고 있습니다. 이곳에서는 이 동영상의 내용, 영향 및 레비스와 디지털 세계에 대한 보다 넓은 함의를 탐험해 보겠습니다.
-```
 
 <div class="content-ad"></div>
 

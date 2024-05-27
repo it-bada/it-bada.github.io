@@ -3,15 +3,13 @@ title: "위 스포츠 - 닌텐도를 구한 게임"
 description: ""
 coverImage: "/assets/img/2024-05-27-WiiSports-TheGameThatSavedNintendo_0.png"
 date: 2024-05-27 19:59
-ogImage: 
+ogImage:
   url: /assets/img/2024-05-27-WiiSports-TheGameThatSavedNintendo_0.png
 tag: Tech
 originalTitle: "Wii Sports-The Game That Saved Nintendo"
 link: "https://medium.com/@jacksonmessineo/wii-sports-the-game-that-saved-nintendo-41f88fd8782f"
 ---
 
-
-```markdown
 ![Wii Sports](/assets/img/2024-05-27-WiiSports-TheGameThatSavedNintendo_0.png)
 
 Wii Sports is one of those games that everyone has played once or has at least heard of. I can guarantee that if you walk up to anyone on the street and ask, “Do you know what Wii Sports is”, they will most likely say yes.
@@ -19,7 +17,6 @@ Wii Sports is one of those games that everyone has played once or has at least h
 It’s really hard to believe that Wii Sports is 6 months away from being legal. I still remember going to my grandma’s house and versing her in tennis, baseball, and our favorite, bowling.
 
 Wii Sports is most known for being the game that put the Nintendo Wii on the map. Everyone and their mother bought a Wii at this time because the console and Wii Sports were marketed as “anyone can pick up and play”.
-```
 
 <div class="content-ad"></div>
 
