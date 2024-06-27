@@ -77,7 +77,7 @@ type RequestHandler func(interface{}) error
 
 <div class="content-ad"></div>
 
-````
+
 ### interface.go
 
 ```go
@@ -99,7 +99,7 @@ type Dispatcher interface {
  MakeRequest(Request)
  Stop(ctx context.Context)
 }
-````
+```
 
 ### worker.go
 

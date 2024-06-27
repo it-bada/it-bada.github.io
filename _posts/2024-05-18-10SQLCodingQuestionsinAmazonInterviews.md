@@ -54,13 +54,13 @@ WHERE salary > (SELECT AVG(salary) FROM employees);
 
 <div class="content-ad"></div>
 
-```md
+
 이 쿼리는 각 직원의 급여를 평균 급여와 비교하여 평균 이상을 받는 사람을 찾습니다.
 
 ## 3. 직원 계층
 
 아마존은 직원 계층을 찾는 것과 같은 계층적 데이터에 관한 질문을 할 수 있습니다. 재귀 CTE를 사용하여 직원 계층을 찾을 수 있습니다:
-```
+
 
 <div class="content-ad"></div>
 

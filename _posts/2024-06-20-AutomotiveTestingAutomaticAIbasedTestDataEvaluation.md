@@ -46,9 +46,9 @@ link: "https://medium.com/itnext/automotive-testing-automatic-ai-based-test-data
 
 먼저 환경을 설정해보세요: Jupyter Notebook을 시작하고 필요한 Python 패키지를 설치해주세요:
 
-```markdown
+
 !pip install fastf1 pandas umap-learn renumics-spotlight
-```
+
 
 다음 패키지들을 사용할 거에요:
 
@@ -114,7 +114,7 @@ data = [dataframe_to_dict(tele) | lap for lap, tele in zip(laps, df_laps_telemet
 df = pd.DataFrame(data)
 ```
 
-대규모 DataFrame:```
+대규모 DataFrame:
 
 <div class="content-ad"></div>
 
@@ -145,7 +145,7 @@ def interpolate_column(values):
 
 <div class="content-ad"></div>
 
-```markdown
+
 이후에는 그들의 차원을 줄일 수 있습니다:
 
 ```python
@@ -158,17 +158,17 @@ df["Speed_emb_umap"] = np.array(reduced_embedding).tolist()
 ```
 
 결과는 적절한 시각화 도구를 사용하여 표시 및 탐색에 활용될 수 있습니다. 이 예시에서는 Renumics-Spotlight를 활용했습니다.
-```
+
 
 <div class="content-ad"></div>
 
-```markdown
+
 To start an interactive visualization of the DataFrame, use the following code:
 
 ![Interactive DataFrame Visualization](/assets/img/2024-06-20-AutomotiveTestingAutomaticAIbasedTestDataEvaluation_0.png)
 
 In the table on the left, the DataFrame is displayed. You can use the “visible columns” button to control which columns are shown in the table. The similarity map is shown in the top right. Selected data points are displayed at the bottom, where the speed profile is plotted.
-```
+
 
 <div class="content-ad"></div>
 
